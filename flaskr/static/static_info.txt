@@ -1,0 +1,4 @@
+Why static?
+	--> Static because style will not change. So static style
+
+"Besides CSS, other types of static files might be files with JavaScript functions, or a logo image. They are all placed under the flaskr/static directory and referenced with url_for('static', filename='...')."

@@ -38,4 +38,10 @@ def create_app(test_config=None):
     from . import auth 																	# Like above, import and register blueprint "auth" with app factory fn
     app.register_blueprint(auth.bp)
 
+    from . import blog                                                                  # Like above, import and register blueprint "auth" with app factory fn
+    app.register_blueprint(blog.bp)
+    app.add_url_rule('/', endpoint='index')                                             # Because blog blueprint does not have any prefix (Since it is the main feature), so index view would be at '/'. So i guess we are using default for '/' to be blog.index view
+                                                                                        # app.add_url_rule() associates the endpoint name 'index' with blog.index (So index = blog.index and generate the same url).
+                                                                                        #       This is the 'index' endpoint that is referended in auth.py
+                                                                                        #       We could setup any other view to be index or even write a function in the app factory with @app.route('/')
     return app

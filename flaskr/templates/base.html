@@ -1,0 +1,30 @@
+<!--
+  base.html
+    Base template for every page on blog
+      - Each page will modify and override specific sections
+-->
+
+<!doctype html>
+<title>{% block title %}{% endblock %} - Flaskr</title>           <!-- Block Title -->
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+  <h1>Flaskr</h1>
+  <ul>
+    {% if g.user %}                           <!-- Display either username and logout, or register and login link depending on g.user from load_logged_in_user() from auth.py-->
+      <li><span>{{ g.user['username'] }}</span>
+      <li><a href="{{ url_for('auth.logout') }}">Log Out</a>
+    {% else %}
+      <li><a href="{{ url_for('auth.register') }}">Register</a>
+      <li><a href="{{ url_for('auth.login') }}">Log In</a>
+    {% endif %}
+  </ul>
+</nav>
+<section class="content">
+  <header>
+    {% block header %}{% endblock %}           <!-- Block Header: Like Block title -->
+  </header>
+  {% for message in get_flashed_messages() %}  <!-- Loop through flashed messages and display them (after title and before content) -->
+    <div class="flash">{{ message }}</div>
+  {% endfor %}
+  {% block content %}{% endblock %}           <!-- Block Content -->
+</section>

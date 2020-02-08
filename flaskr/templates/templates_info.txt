@@ -1,0 +1,6 @@
+templates:
+	--> We use render_template() in views
+	--> Templates use static data along with placeholders for dynamic data
+	--> Flask uses Jinja (jinja.pocoo.org/docs/templates/)
+		--> Jinja autoescapes user input so safe to use
+			(Read more for further information on how it works)
