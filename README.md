@@ -7,6 +7,4 @@ Project done following tutorial from https://flask.palletsprojects.com/en/1.1.x/
 
 **Things to complete at a later date:**  
 
-	Need to cover testing and deployment clearly (Did not complete since primary purpose is understanding how websites work)
-
-	Attach other web based projects to the side
+	Need to cover testing and deployment clearly (Did go over in detail since primary purpose is understanding how websites work)
