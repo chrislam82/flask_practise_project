@@ -1,6 +1,7 @@
 # Flask Practise
 
-Project done following tutorial from https://flask.palletsprojects.com/en/1.1.x/tutorial/#tutorial
+Project done following tutorial from https://flask.palletsprojects.com/en/1.1.x/tutorial/#tutorial  
+Purpose: To understand how building a website works while using my most familiar languages (Python)  
 
 	Comments written to understand how web dev using Flask works
 
